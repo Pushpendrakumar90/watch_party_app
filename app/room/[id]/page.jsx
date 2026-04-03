@@ -42,7 +42,7 @@ export default function Room() {
         const data = await res.json();
 
         if (!res.ok || !data.user) {
-          toast.error("Bhai login zaroori hai!");
+          toast.error("pleas login!");
           window.location.href = "/login";
           return;
         }
@@ -68,17 +68,17 @@ export default function Room() {
           // Video ID update listener
           socket.on("video-changed", (id) => {
             setCurrentVideoId(id);
-            toast.success("Video change ho gayi! 📺");
+            toast.success("Video changed! ");
           });
 
           socket.on("permission-updated", (allowed) => {
             setCanControl(allowed);
-            const msg = allowed ? "Sabko control mil gaya!" : "Sirf Host control kar sakta hai!";
-            toast(msg, { icon: '🔐' });
+            const msg = allowed ? "acees all user" : "only admin!";
+            toast(msg, { icon: '' });
           });
 
           socket.on("kicked-from-room", () => {
-            toast.error("Host ne laat maar ke nikal diya! 😂");
+            toast.error("Host;s you kicked ");
             router.push("/");
           });
         }
@@ -124,7 +124,7 @@ export default function Room() {
       socket.emit("change-video", { roomId, videoId: id });
       setVideoUrl("");
     } else {
-      toast.error("Sahi link dalo bhai!");
+      toast.error("pls ckeck link!");
     }
   };
 
