@@ -1,0 +1,38 @@
+{
+  "name": "watch_party_app",
+  "version": "1.0.0",
+  "description": "YouTube Sync Watch Party",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "socket": "node server/server.js"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
+    "clsx": "^2.1.1",
+    "jsonwebtoken": "^9.0.3",
+    "lucide-react": "^0.300.0",
+    "mongoose": "^9.3.3",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-hot-toast": "^2.6.0",
+    "react-youtube": "^10.1.0",
+    "socket.io": "^4.7.0",
+    "socket.io-client": "^4.7.0",
+    "tailwind-merge": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}
